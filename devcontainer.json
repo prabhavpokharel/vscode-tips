@@ -1,0 +1,38 @@
+{
+  // This file tells VS Code to open your project inside a Docker container.
+  // Everyone on the team gets the same environment — no more "works on my machine".
+  //
+  // Docs: https://containers.dev
+
+  // The name shown in VS Code's bottom status bar
+  "name": "Node.js 20 Dev Environment",
+
+  // Which Docker image to use as the base
+  // Browse all available images at: https://mcr.microsoft.com/en-us/product/devcontainers/
+  "image": "mcr.microsoft.com/devcontainers/node:20",
+
+  // Extensions to install automatically inside the container
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "aaron-bond.better-comments",
+        "formulahendry.auto-rename-tag"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+
+  // Runs once after the container is built
+  "postCreateCommand": "npm install",
+
+  // These ports are automatically forwarded from the container to your local browser
+  "forwardPorts": [3000, 5173, 8080],
+
+  "remoteUser": "node"
+}

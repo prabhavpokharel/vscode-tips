@@ -1,0 +1,12 @@
+{
+  // VS Code will prompt anyone who opens this project to install these extensions.
+  // Add the install ID of any extension your project depends on.
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "aaron-bond.better-comments",
+    "formulahendry.auto-rename-tag",
+    "usernamehw.errorlens"
+  ]
+}

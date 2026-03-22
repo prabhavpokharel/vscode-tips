@@ -1,0 +1,27 @@
+# .aliases
+#
+# A collection of terminal shortcuts for this project.
+# Load them in any session by running: source .aliases
+#
+# You can commit this file so your whole team shares the same shortcuts.
+
+# List all files with details (replaces typing "ls -la" every time)
+alias l="ls -la"
+
+# Run the test suite
+alias t="npm run test"
+
+# Start the dev server
+alias dev="npm run dev"
+
+# Build for production
+alias build="npm run build"
+
+# Run the linter
+alias lint="npm run lint"
+
+# Shortcut to go up one directory
+alias ..="cd .."
+
+# Shortcut to go up two directories
+alias ...="cd ../.."

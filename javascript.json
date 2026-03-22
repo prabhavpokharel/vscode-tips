@@ -1,0 +1,99 @@
+{
+  // Custom JavaScript/TypeScript snippets.
+  // To use: type the "prefix" in a JS or TS file and press Tab.
+  //
+  // Syntax guide:
+  //   $1, $2    = cursor stops (Tab moves between them)
+  //   ${1:text} = cursor stop with placeholder text
+  //   $0        = final cursor position
+
+  // --- Logging ---
+
+  "Console Log Variable": {
+    "prefix": "clg",
+    "body": ["console.log('$1:', $1);"],
+    "description": "Log a variable with its name"
+  },
+
+  "Console Log with Divider": {
+    "prefix": "clgd",
+    "body": ["console.log('--- $1 ---', $1);"],
+    "description": "Log a variable with a visual separator"
+  },
+
+  // --- Functions ---
+
+  "Arrow Function": {
+    "prefix": "af",
+    "body": ["const ${1:name} = (${2:params}) => {", "  $0", "};"],
+    "description": "Arrow function with body"
+  },
+
+  "Async Arrow Function": {
+    "prefix": "aaf",
+    "body": ["const ${1:name} = async (${2:params}) => {", "  $0", "};"],
+    "description": "Async arrow function"
+  },
+
+  "Try-Catch Block": {
+    "prefix": "tc",
+    "body": [
+      "try {",
+      "  $1",
+      "} catch (error) {",
+      "  console.error(error);",
+      "  $0",
+      "}"
+    ],
+    "description": "Try-catch block"
+  },
+
+  // --- React ---
+
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "export default function ${1:ComponentName}() {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "}"
+    ],
+    "description": "React functional component"
+  },
+
+  "React useState Hook": {
+    "prefix": "ust",
+    "body": ["const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
+    "description": "useState hook with matching setter name"
+  },
+
+  "React useEffect Hook": {
+    "prefix": "uef",
+    "body": [
+      "useEffect(() => {",
+      "  $1",
+      "  return () => {",
+      "    $0",
+      "  };",
+      "}, [${2:deps}]);"
+    ],
+    "description": "useEffect with cleanup function"
+  },
+
+  // --- Comments ---
+
+  "TODO Comment": {
+    "prefix": "todo",
+    "body": ["// TODO: $0"],
+    "description": "Add a TODO comment"
+  },
+
+  "FIXME Comment": {
+    "prefix": "fixme",
+    "body": ["// FIXME: $0"],
+    "description": "Add a FIXME comment"
+  }
+}
