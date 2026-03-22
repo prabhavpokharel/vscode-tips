@@ -1,4 +1,4 @@
-# ⚡ VS Code Tips & Tricks — From Beginner to Pro
+# VS Code Tips & Tricks: From Beginner to Pro
 
 > *"VS Code is like a knife — it's only as good as the hands that wield it."*
 
